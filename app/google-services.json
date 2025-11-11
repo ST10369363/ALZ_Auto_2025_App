@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "941750657381",
+    "project_id": "alsauto-eeef4",
+    "storage_bucket": "alsauto-eeef4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941750657381:android:ffe0af1ad6639aa7fb418c",
+        "android_client_info": {
+          "package_name": "com.example.alz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC00RYYYVLZ4wQs0MfBrBwX4Kl-75BW3m0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

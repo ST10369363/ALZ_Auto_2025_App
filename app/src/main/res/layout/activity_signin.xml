@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSignUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#F0F0F0"
+    tools:context=".signin">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintHeight_default="wrap"> <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/full_white_logo"
+                android:contentDescription="App Logo"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/SignInName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Name"
+                android:inputType="textPersonName"
+                app:layout_constraintTop_toBottomOf="@id/imageViewLogo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/SignInSurname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Surname"
+                android:inputType="textPersonName"
+                app:layout_constraintTop_toBottomOf="@id/SignInName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/SignInAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Age"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/SignInSurname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/SignInPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Phone Number"
+                android:inputType="phone"
+                app:layout_constraintTop_toBottomOf="@id/SignInAge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/SignInEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Email Address"
+                android:inputType="textEmailAddress"
+                app:layout_constraintTop_toBottomOf="@id/SignInPhone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/emailInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Your email must include an '@' symbol and be a valid email format (e.g. example@gmail.com)."
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                app:layout_constraintTop_toBottomOf="@id/SignInEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp" />
+
+            <EditText
+                android:id="@+id/SignInPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Password"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/emailInfo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/SignInConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/SignInPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                />
+
+
+            <TextView
+                android:id="@+id/passwordInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Password must have:\n• At least one uppercase letter\n• At least one number\n• Minimum 5 characters"
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                app:layout_constraintTop_toBottomOf="@id/SignInConfirmPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp" />
+
+            <Button
+                android:id="@+id/BtnSignIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:backgroundTint="#0056B3"
+                app:layout_constraintTop_toBottomOf="@id/passwordInfo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/BtnBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:backgroundTint="#ffffff"
+                android:textColor="#0056B3"
+                app:layout_constraintTop_toBottomOf="@id/BtnSignIn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

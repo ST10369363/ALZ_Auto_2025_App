@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inv_scrollContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    android:background="#F0F0F0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/inv_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="App Logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/TwoAInvoiceDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:text="Dashboard"
+            android:textSize="12sp"
+            android:backgroundTint="#0056B3"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="96dp"> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inv_inputName"  android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="First Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/inv_inputSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Surname"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inv_inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inv_inputPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inv_inputBookingID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Booking ID"
+                android:inputType="text"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inv_inputVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle Name"
+                android:inputType="text"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/inv_inputDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Booking Date"
+                android:inputType="date"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Line Items"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/inv_lineItemsContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/inv_btnAddLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Line"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#007bff"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/inv_tvTotalAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Amount: R0.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/inv_totalBox"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"  android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Calculations" android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/inv_inputSubtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Subtotal"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/inv_inputTaxPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tax %"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/inv_inputTaxAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tax Amount"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/inv_inputNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Notes"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:layout_marginBottom="16dp"
+                android:background="#f0f0f0"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/inv_btnCreateInvoice"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Create Invoice"
+                    android:backgroundTint="#008000"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="4dp"/>
+                <Button
+                    android:id="@+id/inv_btnClear"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:backgroundTint="#ff0000"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

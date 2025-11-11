@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".booking">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/full_white_logo"
+        android:contentDescription="App Logo"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBookingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Make a Booking"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintTop_toTopOf="@+id/logoImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
+        app:layout_constraintStart_toEndOf="@+id/logoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        android:layout_marginStart="8dp" />
+
+    <ScrollView
+        android:id="@+id/layoutBooking"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="66dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigationBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:backgroundTint="@android:color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <EditText
+                    android:id="@+id/inputName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColor="#000000"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintTop_toBottomOf="@id/inputName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/inputPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toBottomOf="@id/inputEmail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/inputDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Booking Date"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toBottomOf="@id/inputPhone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvServices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Service:"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/inputDate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerservices"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvServices"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/inputOtherService"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Please specify other service"
+                    android:visibility="gone"
+                    android:inputType="textCapSentences"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerservices"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/inputMake"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Vehicle Make (e.g. Toyota)"
+                    android:inputType="textCapWords"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toBottomOf="@id/inputOtherService"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="20dp" />
+
+                <EditText
+                    android:id="@+id/inputModel"
+                    android:layout_width="0dp"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:hint="Vehicle Model (e.g. Corolla)"
+                    android:inputType="textCapWords"
+                    app:layout_constraintTop_toBottomOf="@id/inputMake"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/inputMileage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Current Mileage (km)"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toBottomOf="@id/inputModel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp" />
+
+                <Button
+                    android:id="@+id/btnSubmitBooking"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Booking"
+                    android:backgroundTint="#008000"
+                    app:layout_constraintTop_toBottomOf="@id/inputMileage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#EEEEEE"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/BookingDashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0056B3"
+            android:text="Dashboard" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
